@@ -42,15 +42,15 @@ function setup() {
   block15 = new Block(420, 195, 30, 40);
   //top
   block16 = new Block(390, 155, 30, 40);
-  block17 = new Block(700, 100, 30, 40);
-  block18 = new Block(670, 100, 30, 40);
-  block19 = new Block(640, 100, 30, 40);
-  block20 = new Block(730, 100, 30, 40);
-  block21 = new Block(760, 100, 30, 40);
-  block22 = new Block(700, 60, 30, 40);
-  block23 = new Block(670, 60, 30, 40);
-  block24 = new Block(730, 60, 30, 40);
-  block25 = new Block(700, 20, 30, 40);
+  block17 = new Block(700, 180, 30, 40);
+  block18 = new Block(670, 180, 30, 40);
+  block19 = new Block(640, 180, 30, 40);
+  block20 = new Block(730, 180, 30, 40);
+  block21 = new Block(760, 180, 30, 40);
+  block22 = new Block(700, 140, 30, 40);
+  block23 = new Block(670, 140, 30, 40);
+  block24 = new Block(730, 140, 30, 40);
+  block25 = new Block(700, 100, 30, 40);
   polygon = Bodies.circle(200, 200, 30);
   World.add(world, polygon);
   sling = new SlingShot({
@@ -114,4 +114,9 @@ function mouseDragged() {
 }
 function mouseReleased() {
   sling.fly();
+}
+function keyPressed() {
+  if (keyCode === 32) {
+    sling.attach(polygon);
+  }
 }
